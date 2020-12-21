@@ -1,5 +1,6 @@
 import { GetServerSideProps } from 'next'
 import { Title } from '../styles/pages/Home'
+import SEO from '@/components/SEO';
 interface IProduct {
   id: string;
   title: string;
@@ -19,6 +20,11 @@ const Home = ({ recommendedProducts }: HomeProps) => {
 
   return (
     <div>
+      <SEO 
+        title='DevCommerce, your best ecommerce for dev clothes!'
+        shouldExcludeTitleSuffix
+      />
+
       <section>
         <Title>Products</Title>
 
